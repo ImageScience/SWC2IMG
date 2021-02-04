@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>org.imagescience</groupId>
+	<artifactId>SWC2IMG_</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	
+	<name>SWC2IMG</name>
+	<description>An ImageJ plugin for neuron image synthesis.</description>
+	<url>https://imagescience.org/meijering/software/swc2img/</url>
+	<inceptionYear>2019</inceptionYear>
+	
+	<licenses>
+		<license>
+			<name>ImageScience</name>
+			<url>https://imagescience.org/meijering/software/swc2img/</url>
+		</license>
+	</licenses>
+	
+	<developers>
+		<developer>
+			<name>Erik Meijering</name>
+			<url>https://imagescience.org/meijering/</url>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+	
+	<scm>
+		<connection>scm:git:git://github.com/ImageScience/SWC2IMG</connection>
+		<developerConnection>scm:git:ssh://github.com:ImageScience/SWC2IMG</developerConnection>
+		<url>https://github.com/ImageScience/SWC2IMG</url>
+	</scm>
+	
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>org.imagescience</id>
+			<url>https://github.com/imagescience/maven/raw/public/</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+			<version>1.53e</version>
+		</dependency>
+		<dependency>
+			<groupId>org.imagescience</groupId>
+			<artifactId>ImageScience</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+	</dependencies>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<build>
+		<sourceDirectory>source/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>source/resources</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<stylesheetfile>source/css/stylesheet.css</stylesheetfile>
+					<show>public</show>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
