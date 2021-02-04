@@ -126,7 +126,7 @@ public final class SWC2IMG implements PlugIn, ActionListener, WindowListener {
 		gd.setInsets(0,2,0); gd.addCheckbox(" Log messaging",log);
 		
 		// Add dialog buttons:
-		gd.addHelp("https://imagescience.org/meijering/software/swc2img/");
+		gd.addHelp("https://imagescience.org/meijering/software/swc2img/manual/");
 		gd.setHelpLabel("   Help   ");
 		gd.setCancelLabel(" Cancel ");
 		gd.setOKLabel("    Run    ");
