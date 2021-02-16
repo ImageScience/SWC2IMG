@@ -72,6 +72,18 @@ final class Neuron {
 		return false;
 	}
 	
+	private String path = null;
+	
+	void path(final String path) { this.path = path; }
+	
+	String path() { return path; }
+	
+	private Vector<String> file = null;
+	
+	void file(final Vector<String> file) { this.file = file; }
+	
+	Vector<String> file() { return file; }
+	
 	private final static int BINS = 1000;
 	
 	private final Object[][] map = new Object[BINS][BINS];

@@ -5,7 +5,7 @@ import ij.ImageJ;
 import ij.plugin.BrowserLauncher;
 import ij.plugin.PlugIn;
 
-/** Opens the <a href="https://imagescience.org/meijering/software/swc2img/" target="_blank">SWC2IMG website</a> in the default internet browser. */
+/** ImageJ plugin for loading the <a href="https://imagescience.org/meijering/software/swc2img/" target="_blank">SWC2IMG website</a> in the default internet browser. */
 public final class About implements PlugIn {
 	
 	/** Default constructor. */
